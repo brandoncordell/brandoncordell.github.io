@@ -17,11 +17,16 @@ var github = (function(){
         , dataType: 'jsonp'
         , error: function (err) { $(options.target + ' li.loading').addClass('error').text("Error loading feed"); }
         , success: function(data) {
-          var repos = [];
+          var repoWhitelist = [22069515, 19223557, 17688372, 1244980],
+          repos = [];
+
           if (!data || !data.data) { return; }
           for (var i = 0; i < data.data.length; i++) {
             if (options.skip_forks && data.data[i].fork) { continue; }
-            repos.push(data.data[i]);
+
+            if (repoWhitelist.indexOf(data.data[i].id) > -1) {
+              repos.push(data.data[i]);
+            }
           }
           if (options.count) { repos.splice(options.count); }
           render(options.target, repos);
