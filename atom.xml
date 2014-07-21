@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[]]></title>
   <link href="http://brandoncordell.github.io/atom.xml" rel="self"/>
   <link href="http://brandoncordell.github.io/"/>
-  <updated>2014-07-21T11:30:58-04:00</updated>
+  <updated>2014-07-21T11:39:02-04:00</updated>
   <id>http://brandoncordell.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
-    
+    <name><![CDATA[Brandon Cordell]]></name>
+    <email><![CDATA[brandon@brandoncordell.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
