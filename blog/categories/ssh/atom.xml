@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[]]></title>
-  <link href="http://brandoncordell.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: ssh | ]]></title>
+  <link href="http://brandoncordell.github.io/blog/categories/ssh/atom.xml" rel="self"/>
   <link href="http://brandoncordell.github.io/"/>
   <updated>2014-07-21T13:02:24-04:00</updated>
   <id>http://brandoncordell.github.io/</id>
@@ -22,21 +22,18 @@
 
 <p>First, I ssh to the server, tail the log, and pipe the output to a file on my local machine.</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>ssh server <span class="s2">&quot;tail -f /path/to/production.log&quot;</span> &gt;&gt; ~/Library/Logs/prod.log <span class="p">&amp;</span>
-</span><span class='line'><span class="o">[</span>1<span class="o">]</span> 87094
-</span></code></pre></td></tr></table></div></figure>
-
+<p><code>bash
+$ ssh server "tail -f /path/to/production.log" &gt;&gt; ~/Library/Logs/prod.log &amp;
+[1] 87094
+</code></p>
 
 <p>The <code>&amp;</code> at the end of the command will run the process in the background so you don&rsquo;t have to keep a terminal
 window open with no output. When you run the command it will return a process id you can use to kill the process
 later.</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span><span class="nb">kill</span> -9 87094
-</span></code></pre></td></tr></table></div></figure>
-
+<p><code>bash
+$ kill -9 87094
+</code></p>
 
 <p>Now that we have a local log file updating in real time, we can use the built-in Console.app to watch the log.
 In Console.app, open your local log file by going to <em>File > Open Quickly > Files > ~/Library/Logs > prod.log.</em></p>

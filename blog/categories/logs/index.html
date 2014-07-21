@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Category: logs - </title>
   <meta name="author" content="Brandon Cordell">
 
   
-  <meta name="description" content="logs, osx, ssh Tailing Remote Log Files on OS X I wanted to share how I deal with watching remote log files on our production server. First, I ssh &hellip;">
+  <meta name="description" content="Category: logs">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://brandoncordell.github.io">
+  <link rel="canonical" href="http://brandoncordell.github.io/blog/categories/logs">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/styles.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="" type="application/atom+xml">
@@ -121,71 +121,37 @@
 </div>
 		</aside>
 		
-      
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Category: Logs</h1>
+  </header>
+  
+  <div id="blog-archives" class="category">
 
+
+
+  
+  <h2>2014</h2>
 
 <article>
-	<header>
-  <div class="article-tags">
-      
-
-<span class="categories">
   
-    <a class='category' href='/blog/categories/logs/'>logs</a>, <a class='category' href='/blog/categories/osx/'>osx</a>, <a class='category' href='/blog/categories/ssh/'>ssh</a>
-  
-</span>
+<h1><a href="/blog/2014/07/21/tailing-remote-log-files-on-os-x/">Tailing Remote Log Files on OS X</a></h1>
+<time datetime="2014-07-21T12:18:27-04:00" pubdate><span class='month'>Jul</span> <span class='day'>21</span> <span class='year'>2014</span></time>
 
-
-  </div>
-  
-    <h1><a href="/blog/2014/07/21/tailing-remote-log-files-on-os-x/">
-      Tailing Remote Log Files on OS X
-    </a></h1>
-  
-</header>
-
-  <section><p>I wanted to share how I deal with watching remote log files on our production server.</p>
-
-<p>First, I ssh to the server, tail the log, and pipe the output to a file on my local machine.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>ssh server <span class="s2">&quot;tail -f /path/to/production.log&quot;</span> &gt;&gt; ~/Library/Logs/prod.log <span class="p">&amp;</span>
-</span><span class='line'><span class="o">[</span>1<span class="o">]</span> 87094
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The <code>&amp;</code> at the end of the command will run the process in the background so you don&rsquo;t have to keep a terminal
-window open with no output. When you run the command it will return a process id you can use to kill the process
-later.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span><span class="nb">kill</span> -9 87094
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now that we have a local log file updating in real time, we can use the built-in Console.app to watch the log.
-In Console.app, open your local log file by going to <em>File > Open Quickly > Files > ~/Library/Logs > prod.log.</em></p>
-
-<p>I usually drag Console.app to my second monitor and give it a desktop of it&rsquo;s own. Since I will typically keep
-higher priority apps up on my second monitor it&rsquo;s useful to know when the log is being written to. Console.app
-has a preference to do this, just goto <em>Console.app > Preferences</em> and check <em>Animate the application icon</em> or
-<em>Bring log window to front, send back after:</em> (whichever is least annoying for you).</p>
-</section>
-  
-  
-
+<footer>
+  <span class="categories">posted in <a class='category' href='/blog/categories/logs/'>logs</a>, <a class='category' href='/blog/categories/osx/'>osx</a>, <a class='category' href='/blog/categories/ssh/'>ssh</a></span>
+</footer>
 
 
 </article>
 
-<div class="pagination">
-
-
-
 </div>
 
-
+  
+</article>
+</div>
     </div>
   </div>
   <footer class="main-footer">
